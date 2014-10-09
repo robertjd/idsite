@@ -106,7 +106,7 @@ angular.module('stormpathIdpApp').controller('LoginCtrl', [
       var params = {
           clientid: Stormpath.getProvider('google').clientId,
           scope: 'email',
-          cookiepolicy: 'single_host_origin',
+          cookiepolicy: 'none',
           callback: function (authResult) {
             if (!googleIsSignedIn && authResult.status.signed_in) {
               googleIsSignedIn = true;
