@@ -322,7 +322,10 @@ angular.module('stormpathIdpApp').service('Stormpath', [
     this.login = function login(username, password, cb) {
       client.login({
         login: username,
-        password: password
+        password: password,
+        accountStore:{
+          href: 'https://api.stormpath.com/v1/directories/28eVLYv1rvxss0AFL5opiR'
+        }
       }, function (err, response) {
         $rootScope.$apply(function () {
           if (err) {
