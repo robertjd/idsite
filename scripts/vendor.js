@@ -27306,7 +27306,7 @@ if (typeof jQuery === 'undefined') {
             data = {
               type: 'basic',
               value: utils.base64.btoa(creds.login + ':' + creds.password),
-              accountStore: credentials.acccountStore
+              accountStore: credentials.accountStore
             };
           } else {
             throw new Error('unsupported credentials object');
